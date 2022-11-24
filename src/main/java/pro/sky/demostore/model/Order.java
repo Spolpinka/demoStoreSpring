@@ -1,4 +1,4 @@
-package pro.sky.homework.demostore.demostorespring;
+package pro.sky.demostore.model;
 
 public class Order {
     private final int id;

@@ -1,4 +1,4 @@
-package pro.sky.homework.demostore.demostorespring;
+package pro.sky.demostore.recorder;
 
 public class OrderRequest {
     private int id;

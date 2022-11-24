@@ -1,8 +1,9 @@
-package pro.sky.homework.demostore.demostorespring;
+package pro.sky.demostore.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pro.sky.demostore.service.StoreService;
 
 import java.util.List;
 
@@ -18,8 +19,9 @@ public class StoreController {
     public List<Integer> getOrdersId() {
         return storeService.getOrdersId();
     }
-    @PostMapping("/store/order/add")
-    public void addOrders(Integer... integers) {
-        storeService.addOrders(integers);
+    @GetMapping("/store/order/add")
+    public String addOrders(@RequestParam("id") Integer... ids) {
+        storeService.addOrders(ids);
+        return "Приняты id " + ids;
     }
 }
